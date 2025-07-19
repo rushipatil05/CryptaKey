@@ -2,8 +2,8 @@ import express from 'express';
 import cors from 'cors';
 import connectToMongoDB from '../db/db.js';
 
-import authRouter from '../routes/auth.js';
-import noteRouter from '../routes/note.js';
+import authRouter from './auth.js';
+import noteRouter from './note.js';
 import dotenv from "dotenv";
 import serverless from 'serverless-http';  // ✅ Needed for Vercel
 
