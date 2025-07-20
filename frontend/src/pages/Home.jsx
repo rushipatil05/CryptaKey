@@ -48,7 +48,7 @@ const Home = () => {
   const deleteNote =async(id) =>{
     try {
       const response = await axios.delete(
-        `http://localhost:5000/api/note/${id}`,
+        `https://safevault-fpik.onrender.com/api/note/${id}`,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
