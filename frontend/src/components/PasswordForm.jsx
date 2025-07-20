@@ -15,7 +15,7 @@ const PasswordForm = ({ fetchNotes }) => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/note/add",
+        "https://safevault-fpik.onrender.com/api/note/add",
         { url, username, password },
         {
           headers: {
