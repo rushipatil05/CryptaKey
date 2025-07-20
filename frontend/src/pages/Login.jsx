@@ -20,7 +20,6 @@ const Login = () => {
       if (response.data.success) {
         // Save token & user via ContextProvider login function
         login(response.data.user, response.data.token);
-        console.log("Token saved to localStorage:", response.data.token);
         navigate('/home');
       }
       console.log("✅ Login Success:", response.data);
