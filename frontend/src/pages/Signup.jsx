@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import axios from "axios";
-import { useNavigate } from 'react-router';
+import { useNavigate, Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
+
 const Signup = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const navigate=useNavigate();
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -16,16 +17,18 @@ const Signup = () => {
         email,
         password,
       });
-      if(response.data.success){
-        navigate('/login')
+
+      if (response.data.success) {
+        toast.success("Signup successful");
+        navigate('/login');
+      } else {
+        toast.error("Signup failed");
       }
       console.log("✅ Signup Success:", response.data);
-      toast.success("Signup succesfull");
       
     } catch (error) {
       console.log("❌ Signup Error:", error.message);
-      toast.success("Failed to Signup");
-      
+      toast.error("Failed to Signup");
     }
   };
 
@@ -78,8 +81,8 @@ const Signup = () => {
           </button>
 
           <p className="text-center text-gray-400 text-sm">
-            Already have an account?{" "}
-            <a href="/login" className="text-yellow-400 hover:underline">Login</a>
+            Already have an account?{' '}
+            <Link to="/login" className="text-yellow-400 hover:underline">Login</Link>
           </p>
         </form>
       </div>
