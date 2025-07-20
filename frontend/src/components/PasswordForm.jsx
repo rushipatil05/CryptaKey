@@ -30,7 +30,7 @@ const PasswordForm = ({ fetchNotes }) => {
         setPassword('');
         setShowPassword(false);
         fetchNotes();
-        navigate('/');
+        navigate('/home');
       }
     } catch (error) {
       console.log("❌ Data not added", error.message);

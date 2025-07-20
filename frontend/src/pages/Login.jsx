@@ -21,7 +21,7 @@ const Login = () => {
         // Save token & user via ContextProvider login function
         login(response.data.user, response.data.token);
         console.log("Token saved to localStorage:", response.data.token);
-        navigate('/');
+        navigate('/home');
       }
       console.log("✅ Login Success:", response.data);
       toast.success("Login Success");
