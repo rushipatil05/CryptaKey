@@ -1,47 +1,72 @@
+<<<<<<< HEAD
 🔐CryptaKey:
+=======
+# 🔐 CryptaKey - Your Personal Password Manager
+>>>>>>> e4716ec7fa584403f6716f187779064a27d728fc
 
-A secure and efficient Password Manager web application built with MERN stack (MongoDB, Express.js, React, Node.js). This project allows users to safely store, manage, and retrieve credentials (URLs, usernames, and passwords) with an intuitive interface.
+![CryptaKey Banner](https://github.com/user-attachments/assets/d904c998-befe-43ad-ade7-bcf4426cef86)
 
-🚀 Features:
 
-User Authentication & Authorization
-Secure login and signup using JWT-based authentication.
-Password Storage with Encryption
-Passwords are securely stored in the database with encryption to ensure data protection.
-Add, View, Search, and Delete Passwords
-Easily manage your credentials in a centralized and organized manner.
-Responsive User Interface
-Clean and responsive UI built with React.js for seamless usability across devices.
-Search Functionality
-Quickly search through saved credentials using the built-in search bar.
-Session Management
-User data is automatically cleared upon logout for enhanced privacy.
+**CryptaKey** is a secure and efficient **Password Manager Web Application** built using the **MERN Stack** *(MongoDB, Express.js, React.js, Node.js)*. It allows users to safely **store, manage, and retrieve** their credentials — all wrapped in a sleek, responsive UI.
 
-🛠️ Tech Stack:
+---
 
-Frontend: React.js, Tailwind CSS (optional if you used it)
+## 🚀 Features
 
-Backend: Node.js, Express.js
+✅ **User Authentication & Authorization**  
+Secure login and signup powered by **JWT-based authentication**.
 
-Database: MongoDB
+✅ **Encrypted Password Storage**  
+All passwords are encrypted before storage to ensure utmost security.
 
-Authentication: JWT (JSON Web Tokens)
+✅ **Credential Management**  
+- Add new credentials (URLs, usernames, passwords)
+- View all saved credentials
+- Search credentials with ease
+- Delete credentials you no longer need
 
-Version Control: Git & GitHub
+✅ **Search Functionality**  
+Quickly find your saved credentials via the built-in search bar.
 
-📸 Screenshots: 
+✅ **Session Management**  
+Automatic session clearing on logout to ensure **privacy and safety**.
 
-<img width="1918" height="832" alt="image" src="https://github.com/user-attachments/assets/572c5f06-ef5f-4885-89b9-c0832fecb36c" />
+✅ **Responsive UI**  
+Designed with **React.js & Tailwind CSS** for a modern look and mobile-friendly experience.
 
-<img width="1876" height="861" alt="image" src="https://github.com/user-attachments/assets/e025475e-1d13-41b5-8cbc-bfadc7986c6d" />
+---
 
-<img width="1887" height="901" alt="image" src="https://github.com/user-attachments/assets/54ff59f6-d291-485f-9f49-aa714f4e5f99" />
+## 🛠️ Tech Stack
 
-<img width="1882" height="875" alt="image" src="https://github.com/user-attachments/assets/b606b3d9-2929-442a-8a86-438c4005f7d8" />
+| Layer      | Technology            |
+|------------|-----------------------|
+| Frontend   | React.js, Tailwind CSS |
+| Backend    | Node.js, Express.js    |
+| Database   | MongoDB                |
+| Auth       | JWT (JSON Web Tokens)  |
+| Version Control | Git & GitHub       |
 
-✨ Future Enhancements:
+---
 
-Password strength indicator
-Auto password generator
-Multi-device sync
-Biometric authentication (Fingerprint/Face ID)
+## 📸 Screenshots
+
+| Dashboard                       | Login Page                    |
+|---------------------------------|-------------------------------|
+| ![Dashboard](https://github.com/user-attachments/assets/d904c998-befe-43ad-ade7-bcf4426cef86) | ![Login](https://github.com/user-attachments/assets/572c5f06-ef5f-4885-89b9-c0832fecb36c) |
+
+| Add Credentials                 | Search Credentials            |
+|---------------------------------|-------------------------------|
+| ![Add Credentials](https://github.com/user-attachments/assets/54ff59f6-d291-485f-9f49-aa714f4e5f99) | ![Search Credentials](https://github.com/user-attachments/assets/b606b3d9-2929-442a-8a86-438c4005f7d8) |
+
+
+---
+
+## ✨ Future Enhancements
+
+🚧 **Password Strength Indicator**  
+Help users understand how strong their passwords are.
+
+🚧 **Auto Password Generator**  
+Generate strong, secure passwords automatically.
+
+
