@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import NoteCard from '../components/NoteCard';
 import PasswordForm from '../components/PasswordForm';
+import { toast } from 'react-toastify';
 
 const Home = () => {
   const [notes, setNotes] = useState([]);
@@ -26,6 +27,7 @@ const Home = () => {
 
   window.addEventListener('logout', handleLogout);
   return () => window.removeEventListener('logout', handleLogout);
+  
   }, []);
 
 
@@ -42,9 +44,6 @@ const Home = () => {
     }
   };
 
-  const onEdit = (note) => {
-    setCurrentNote(note);
-  };
 
   const deleteNote =async(id) =>{
     try {
@@ -59,6 +58,7 @@ const Home = () => {
 
       if (response.data.success) {
         fetchNotes();
+        toast.success("Note Deleted");
       }
     } catch (error) {
       console.log("❌ Data not added", error.message);

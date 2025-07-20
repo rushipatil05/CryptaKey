@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import axios from "axios";
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/ContextProvider';
-
+import { toast } from 'react-toastify';
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const navigate =useNavigate();
-  const {login}=useAuth();
+  const navigate = useNavigate();
+  const { login } = useAuth();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -16,14 +16,19 @@ const Login = () => {
         email,
         password,
       });
-      if(response.data.success){
-        login(response.data.user)
-        localStorage.setItem("token",response.data.token)
+
+      if (response.data.success) {
+        // Save token & user via ContextProvider login function
+        login(response.data.user, response.data.token);
+        console.log("Token saved to localStorage:", response.data.token);
         navigate('/');
       }
-      console.log("✅ Signup Success:", response.data);
+      console.log("✅ Login Success:", response.data);
+      toast.success("Login Success");
     } catch (error) {
-      console.log("❌ Signup Error:", error.message);
+      console.log("❌ Login Error:", error.message);
+      toast.success("Incorrect password");
+
     }
   };
 
@@ -66,7 +71,7 @@ const Login = () => {
 
           <p className="text-center text-gray-400 text-sm">
             Don't have an account?{" "}
-            <a href="/register" className="text-yellow-400 hover:underline">SignUp</a>
+            <Link to="/register" className="text-yellow-400 hover:underline">SignUp</Link>
           </p>
         </form>
       </div>

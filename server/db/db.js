@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 
+
 dotenv.config();
 const connectToMongoDB = async () => {
   try {
@@ -12,4 +13,5 @@ const connectToMongoDB = async () => {
   }
 };
 
+dotenv.config();
 export default connectToMongoDB;

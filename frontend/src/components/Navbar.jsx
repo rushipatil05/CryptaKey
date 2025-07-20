@@ -1,9 +1,15 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../context/ContextProvider';
-
+import { useNavigate } from 'react-router-dom';
 const Navbar = ({setQuery}) => {
-  const { user , logout } = useAuth();
+  const { user, logout } = useAuth();
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    logout();          // clears token & dispatches logout event
+    navigate('/login'); // navigates to login page
+  };
   
   return (
     <nav className="w-full bg-[#0a0a0a] text-white border-b border-gray-800 px-6 py-4 shadow-sm">
@@ -31,7 +37,7 @@ const Navbar = ({setQuery}) => {
           ) : (
             <>
               <span className="mr-4 text-yellow-400 font-medium">Hello, {user.name}</span>
-              <button onClick={logout}
+              <button onClick={handleLogout}
                 className="px-4 py-2 rounded-xl border border-yellow-400 text-yellow-400 font-medium hover:bg-yellow-400 hover:text-black transition duration-200">
                 Logout
               </button>
