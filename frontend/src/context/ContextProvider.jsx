@@ -28,7 +28,7 @@ const ContextProvider = ({ children }) => {
       }
 
       try {
-        const res = await axios.get('http://localhost:5000/api/auth/verify', {
+        const res = await axios.get('https://safevault-fpik.onrender.com/api/auth/verify', {
           headers: {
             Authorization: `Bearer ${token}`,
           },
