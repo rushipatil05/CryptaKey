@@ -1,4 +1,4 @@
-🔐SafeVault:
+🔐CryptaKey:
 
 A secure and efficient Password Manager web application built with MERN stack (MongoDB, Express.js, React, Node.js). This project allows users to safely store, manage, and retrieve credentials (URLs, usernames, and passwords) with an intuitive interface.
 
