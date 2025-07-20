@@ -16,3 +16,4 @@ connectToMongoDB();
 
 // ✅ Don't call app.listen
 export default app;
+
