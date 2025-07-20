@@ -16,8 +16,8 @@ const Navbar = ({setQuery}) => {
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         
         <div className="flex-shrink-0">
-          <Link to="/" className="text-2xl font-bold text-yellow-400">
-            SafeVault
+          <Link to="/home" className="text-2xl font-bold text-yellow-400">
+            CryptaKey
           </Link>
         </div>
 

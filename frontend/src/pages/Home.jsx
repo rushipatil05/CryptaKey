@@ -72,7 +72,7 @@ const Home = () => {
       <div className="min-h-screen bg-gradient-to-b from-[#0a0a0a] to-[#111827] px-4 py-8 text-white flex flex-col items-center gap-10">
         <div className="text-center">
           <h1 className="text-4xl font-extrabold">
-            Welcome to <span className="text-yellow-400">SafeVault</span>
+            Welcome to <span className="text-yellow-400">CryptaKey</span>
           </h1>
           <p className="text-gray-400 mt-2 max-w-xl mx-auto">
             Store and manage your <span className="text-yellow-400 font-medium">passwords</span> securely — all in one place.
