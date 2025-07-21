@@ -22,8 +22,8 @@
       "handle": "filesystem"
     },
     {
-      "source": "/(.*)",
-      "destination": "/"
+      "src": "/(.*)",
+      "dest": "frontend/build/index.html"
     }
   ]
 }
