@@ -3,9 +3,12 @@ import axios from "axios";
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/ContextProvider';
 import { toast } from 'react-toastify';
+import { Eye, EyeOff } from 'lucide-react';
+
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
   const { login } = useAuth();
 
@@ -18,16 +21,16 @@ const Login = () => {
       });
 
       if (response.data.success) {
-        // Save token & user via ContextProvider login function
         login(response.data.user, response.data.token);
         navigate('/home');
+        toast.success("Login Success");
+      } else {
+        toast.error("Login failed");
       }
       console.log("✅ Login Success:", response.data);
-      toast.success("Login Success");
     } catch (error) {
       console.log("❌ Login Error:", error.message);
-      toast.success("Incorrect password");
-
+      toast.error("Incorrect password");
     }
   };
 
@@ -51,15 +54,24 @@ const Login = () => {
           </div>
           <div>
             <label className="block text-sm font-medium text-gray-300 mb-1">Password</label>
-            <input
-              type="password"
-              name="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-              placeholder="*****"
-              className="w-full px-4 py-2.5 border border-gray-700 rounded-lg bg-[#1a1a1a] text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-yellow-400 transition duration-150"
-            />
+            <div className="relative">
+              <input
+                type={showPassword ? "text" : "password"}
+                name="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
+                placeholder="*****"
+                className="w-full px-4 py-2.5 border border-gray-700 rounded-lg bg-[#1a1a1a] text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-yellow-400 transition duration-150 pr-12"
+              />
+              <button
+                type="button"
+                onClick={() => setShowPassword(!showPassword)}
+                className="absolute right-3 top-3 text-gray-400 hover:text-yellow-400"
+              >
+                {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
+              </button>
+            </div>
           </div>
           <button
             type="submit"
