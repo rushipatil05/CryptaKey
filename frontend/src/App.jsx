@@ -1,21 +1,21 @@
-import {BrowserRouter as Router,Routes,Route, BrowserRouter} from "react-router-dom";
-import Signup from "./pages/Signup";
-import Home from "./pages/Home";
-import Login from "./pages/Login";
-import FrontPage from "./pages/FrontPage";
-import {ToastContainer} from "react-toastify"
-function App() {
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import FrontPage from './pages/FrontPage.jsx';
+import Home from './pages/Home.jsx';
+import Signup from './pages/Signup.jsx';
+import Login from './pages/Login.jsx';
+
+const App = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/home" element={<Home />}></Route>
-        <Route path="/register" element={<Signup />}></Route>
-        <Route path="/login" element={<Login />}></Route>
-        <Route path="/" element={<FrontPage />}></Route>
+        <Route path="/" element={<FrontPage />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/register" element={<Signup />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
-      <ToastContainer/>
     </BrowserRouter>
-  )
-}
+  );
+};
 
-export default App
+export default App;
