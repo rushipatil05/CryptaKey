@@ -1,9 +1,9 @@
-# 🔐 SafeVault - Your Personal Password Manager
+# 🔐 CryptaKey - Your Personal Password Manager
 
 <img width="1919" height="891" alt="image" src="https://github.com/user-attachments/assets/7a40e321-fb19-4e00-b48f-9e5c074b48b6" />
 
 
-**SafeVault** is a secure and efficient **Password Manager Web Application** built using the **MERN Stack** *(MongoDB, Express.js, React.js, Node.js)*. It allows users to safely **store, manage, and retrieve** their credentials — all wrapped in a sleek, responsive UI.
+**CryptaKey** is a secure and efficient **Password Manager Web Application** built using the **MERN Stack** *(MongoDB, Express.js, React.js, Node.js)*. It allows users to safely **store, manage, and retrieve** their credentials — all wrapped in a sleek, responsive UI.
 
 ---
 
