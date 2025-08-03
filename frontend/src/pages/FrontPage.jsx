@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Linkedin, Github } from 'lucide-react'; 
 
 const FrontPage = () => {
   return (
@@ -52,7 +53,24 @@ const FrontPage = () => {
       </main>
 
       <footer className="text-center py-4 text-gray-500 text-sm border-t border-gray-800 bg-[#0f0f0f] shadow-inner">
-        © 2025 CryptaKey. All rights reserved.
+        <div className="flex justify-center items-center gap-4 mb-2">
+          <a
+            href="https://www.linkedin.com/in/rushikesh-patil-/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-white transition-colors"
+          >
+            <Linkedin size={20} />
+          </a>
+          <a
+            href="https://github.com/rushipatil05"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-white transition-colors"
+          >
+            <Github size={20} />
+          </a>
+        </div>
       </footer>
     </div>
   );
