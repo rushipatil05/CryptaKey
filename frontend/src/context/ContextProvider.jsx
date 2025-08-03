@@ -38,11 +38,11 @@ const ContextProvider = ({ children }) => {
           console.log("✅ Verified user:", res.data.user);
           setUser(res.data.user);
         } else {
-          console.log("❌ User verification failed.");
+          console.log(" User verification failed.");
           setUser(null);
         }
       } catch (error) {
-        console.error('❌ Error verifying user:', error.message);
+        console.error(' Error verifying user:', error.message);
         setUser(null);
       }
     };

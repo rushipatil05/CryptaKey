@@ -9,7 +9,6 @@
   <body>
     <div id="root"></div>
     <script type="module">
-  // First part: URL decoding and history replace
   (function (l) {
     if (l.search[1] === "/") {
       const decoded = l.search
@@ -25,7 +24,7 @@
     }
   })(window.location);
 
-  // Second part: import your main React/JS module
+
   import "/src/main.jsx";
 </script>
 

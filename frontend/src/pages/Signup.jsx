@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from "axios";
 import { useNavigate, Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import { Eye, EyeOff } from 'lucide-react'; // Using lucide icons
+import { Eye, EyeOff } from 'lucide-react'; 
 
 const Signup = () => {
   const [name, setName] = useState('');
