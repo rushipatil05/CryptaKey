@@ -8,7 +8,7 @@ const Navbar = ({setQuery}) => {
 
   const handleLogout = () => {
     logout();          // clears token & dispatches logout event
-    navigate('/login'); // navigates to login page
+    navigate('/'); // navigates to login page
   };
   
   return (

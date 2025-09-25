@@ -1,0 +1,18 @@
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
+button:focus,
+button:focus-visible,
+button:active,
+button:focus-visible:active {
+  outline: none !important;
+  box-shadow: none !important;
+  -webkit-tap-highlight-color: transparent; /* removes tap highlight on mobile Safari */
+}
