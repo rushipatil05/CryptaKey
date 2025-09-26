@@ -17,9 +17,13 @@ export default function RiveButton({ setstartnow }) {
 
   return (
     <div className="absolute top-1/2 left-1/2 text-center -translate-x-1/2 -translate-y-1/2">
-      <h1 className="text-white text-5xl lg:text-6xl pb-6">Welcome to CryptaKey</h1>
+      {/* Heading adjusts for phone, tab, laptop */}
+      <h1 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl pb-6">
+        Welcome to CryptaKey
+      </h1>
 
-      <div className="relative w-48 h-16 mx-auto">
+      {/* Button container with responsive sizing */}
+      <div className="relative w-40 h-12 sm:w-44 sm:h-14 md:w-48 md:h-16 lg:w-56 lg:h-18 mx-auto">
         <RiveComponent
           className="absolute inset-0 w-full h-full pointer-events-none"
           aria-hidden="true"
@@ -27,9 +31,11 @@ export default function RiveButton({ setstartnow }) {
         <button
           onClick={() => setstartnow(false)}
           className="
-    absolute inset-0 flex items-center justify-center w-full h-full 
-    text-white text-sm lg:text-lg cursor-pointer 
-    focus:outline-none focus:ring-0 active:outline-none active:ring-0"
+        absolute inset-0 flex items-center justify-center w-full h-full 
+        text-white text-xs sm:text-sm md:text-base lg:text-lg
+        cursor-pointer rounded-lg
+        focus:outline-none focus:ring-0 active:outline-none active:ring-0
+      "
           onMouseEnter={() => toggleHover(true)}
           onMouseLeave={() => toggleHover(false)}
         >
@@ -37,5 +43,6 @@ export default function RiveButton({ setstartnow }) {
         </button>
       </div>
     </div>
+
   );
 }
